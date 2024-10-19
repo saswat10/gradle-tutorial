@@ -37,19 +37,23 @@
 ### `build.gradle.kts`
 ```kotlin
 
+// plugins
 plugins{
-    java                                            <--- plugins
-}                                                        
+    java                                          
+}
 
-group = "org.example"                               <--- build metadata
+// build metadata
+group = "org.example"                          
 version = "1.0-SNAPSHOT"                                 
 
+// repositories
 repositories {
-    mavenCentral()                                  <--- repositories 
+    mavenCentral()                                   
 }                                                        
 
+// dependencies
 dependencies{
-    testImplementation("junit:junit:4.13.2")        <--- dependencies
+    testImplementation("junit:junit:4.13.2")       
 }                                                        
 
 ```
@@ -110,3 +114,14 @@ dependencies{
 - all files/directories from previous slide SHOULD go in version control
 - .gradle hidden directory SHOULD NOT go in version control(cache files)
 - .gitignore file generated automatically by Gradle
+
+
+```bash
+# some important commands of java plugin
+
+.\gradlew compileJava
+
+.\gradlew processResources
+
+.\gradlew jar
+```
